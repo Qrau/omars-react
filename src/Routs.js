@@ -31,8 +31,8 @@ const MyRoute = () => (
       <hr />
 
       <Route exact path="/Explore" component={ExplorePage} />
-      <Route path="/Results" component={ResultsPage} />
-      <Route path="/Details" component={DetailsPage} />
+      <Route exact path="/Results" component={ResultsPage} />
+      <Route exact path="/Details" component={DetailsPage} />
     </div>
   </Router>
 );

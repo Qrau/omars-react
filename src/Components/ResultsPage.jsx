@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function ResultsPage() {
   return (
-    <div className="MyHome">
+    <div className="ResultsPage">
       <p>Results Page Test</p>
     </div>
   );

@@ -3,8 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function DetailsPage() {
   return (
-    <div className="MyHome">
-      <p>Details Page Test</p>
+    <div className="DetailsPage">
+      <p>Details Page Test asd#fälr erpü</p>
     </div>
   );
 }

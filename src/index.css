@@ -22,3 +22,6 @@ code {
 .AllPages li {
   display: inline-block;
 }
+
+.AllPages li p {
+}
