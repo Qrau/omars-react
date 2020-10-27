@@ -1,16 +1,23 @@
 import React, { Component } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import PropTypes from "prop-types";
-import ReactDOM from "react-dom";
-import MyInput from "./MyInput";
 
-class ExplorePage extends React.Component {
+export default class ResultsPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      brand: "",
       products: [],
-      brand: "barilla",
     };
+
+    this.updateInput = this.updateInput.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  updateInput(event) {
+    this.setState({ brand: event.target.value });
+  }
+
+  handleSubmit() {
+    //Send state to the server code dd
   }
 
   componentDidMount() {
@@ -31,16 +38,12 @@ class ExplorePage extends React.Component {
 
   render() {
     return (
-      <div className="ExplorePage">
-        <MyInput
-          send={(prop) => {
-            console.log(prop);
-          }}
-        />
-        <button onClick={() => this.setState({ brand: "carrefour" })}>
+      <div>
+        <input type="text" onChange={this.updateInput}></input>
+        <input type="submit" onClick={this.handleSubmit}></input>
+        <button onClick={() => this.setState({ brand: "Coca Cola" })}>
           change brand
         </button>
-
         {this.state.products.length !== 0 ? (
           this.state.products.map((product) => <h5>{product.product_name}</h5>)
         ) : (
@@ -50,5 +53,3 @@ class ExplorePage extends React.Component {
     );
   }
 }
-
-export default ExplorePage;
